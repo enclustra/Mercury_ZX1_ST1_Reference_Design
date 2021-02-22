@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------
-# Copyright (c) 2020 by Enclustra GmbH, Switzerland.
+# Copyright (c) 2021 by Enclustra GmbH, Switzerland.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of
 # this hardware, software, firmware, and associated documentation files (the
@@ -26,8 +26,8 @@ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7 processing_system
 set_property -dict [ list \
   CONFIG.PCW_QSPI_PERIPHERAL_ENABLE {1} \
   CONFIG.PCW_QSPI_GRP_FBCLK_ENABLE {1} \
-  CONFIG.PCW_PRESET_BANK0_VOLTAGE {LVCMOS 1.8V} \
-  CONFIG.PCW_PRESET_BANK1_VOLTAGE {LVCMOS 1.8V} \
+  CONFIG.PCW_PRESET_BANK0_VOLTAGE {LVCMOS 2.5V} \
+  CONFIG.PCW_PRESET_BANK1_VOLTAGE {LVCMOS 2.5V} \
   CONFIG.PCW_SD0_PERIPHERAL_ENABLE {1} \
   CONFIG.PCW_SD0_SD0_IO {MIO 40 .. 45} \
   CONFIG.PCW_SD0_GRP_CD_ENABLE {1} \
