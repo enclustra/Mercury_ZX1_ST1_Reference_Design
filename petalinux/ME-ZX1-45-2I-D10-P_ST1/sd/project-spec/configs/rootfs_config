@@ -1229,7 +1229,6 @@ CONFIG_run-postinsts=y
 # CONFIG_boost-container is not set
 # CONFIG_boost-date-time is not set
 # CONFIG_boost-math is not set
-# CONFIG_boost-signals is not set
 # CONFIG_boost-wave is not set
 # CONFIG_boost-chrono is not set
 # CONFIG_boost-timer is not set
@@ -2011,6 +2010,7 @@ CONFIG_run-postinsts=y
 # openssl 
 #
 # CONFIG_openssl is not set
+# CONFIG_openssl-bin is not set
 # CONFIG_openssl-conf is not set
 # CONFIG_openssl-dbg is not set
 # CONFIG_openssl-engines is not set
@@ -3496,11 +3496,25 @@ CONFIG_bridge-utils=y
 #
 
 #
+# dosfstools 
+#
+# CONFIG_dosfstools is not set
+# CONFIG_dosfstools-dev is not set
+# CONFIG_dosfstools-dbg is not set
+
+#
 # patch 
 #
 # CONFIG_patch is not set
 # CONFIG_patch-dev is not set
 # CONFIG_patch-dbg is not set
+
+#
+# resize-part
+#
+# CONFIG_resize-part is not set
+# CONFIG_resize-part-dbg is not set
+# CONFIG_resize-part-dev is not set
 
 #
 # x11 
@@ -3959,6 +3973,13 @@ CONFIG_bridge-utils=y
 # CONFIG_packagegroup-petalinux-self-hosted is not set
 # CONFIG_packagegroup-petalinux-self-hosted-dbg is not set
 # CONFIG_packagegroup-petalinux-self-hosted-dev is not set
+
+#
+# packagegroup-petalinux-updateboot 
+#
+# CONFIG_packagegroup-petalinux-updateboot is not set
+# CONFIG_packagegroup-petalinux-updateboot-dbg is not set
+# CONFIG_packagegroup-petalinux-updateboot-dev is not set
 
 #
 # packagegroup-petalinux-utils 
