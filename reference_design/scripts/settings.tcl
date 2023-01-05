@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------
-# Copyright (c) 2021 by Enclustra GmbH, Switzerland.
+# Copyright (c) 2022 by Enclustra GmbH, Switzerland.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of
 # this hardware, software, firmware, and associated documentation files (the
@@ -21,13 +21,13 @@
 
 # Project settings for Mercury ZX1 Reference Design
 # Valid module codes
+# ME-ZX1-45-2I-D10-P
 # ME-ZX1-30-2I-D10
 # ME-ZX1-35-1I-D10
-# ME-ZX1-45-2I-D10-P
 
 # ----------------------------------------------------------------------------------
 # Modify this variable to select your module
-if {![info exists module_name]} {set module_name ME-ZX1-30-2I-D10}
+if {![info exists module_name]} {set module_name ME-ZX1-45-2I-D10-P}
 if {![info exists baseboard]}   {set baseboard ST1}
 # ----------------------------------------------------------------------------------
 
@@ -39,22 +39,26 @@ if {![info exists baseboard]}   {set baseboard ST1}
 if {[lindex $argv 0] != ""} { set module_name [lindex $argv 0] }
 
 set module Mercury_ZX1
+set family zynq
 
 switch $module_name {
+  ME-ZX1-45-2I-D10-P {
+    set part xc7z045ffg676-2 
+    set CPU_FREQ 2I
+    set PL_DDR 45-2I-D10
+    set MGT_routing B111
+  }
   ME-ZX1-30-2I-D10 {
     set part xc7z030fbg676-2 
     set CPU_FREQ 2I
     set PL_DDR 30-2I-D10
+    set MGT_routing IO
   }
   ME-ZX1-35-1I-D10 {
     set part xc7z035fbg676-1 
     set CPU_FREQ 1I
     set PL_DDR 35-1I-D10
-  }
-  ME-ZX1-45-2I-D10-P {
-    set part xc7z045ffg676-2 
-    set CPU_FREQ 2I
-    set PL_DDR 45-2I-D10
+    set MGT_routing B111
   }
   default {
     puts "$module_name not available"
@@ -67,7 +71,6 @@ if {![info exists project_name]} {
   set project_name ${module}
   if {[info exists baseboard]} {
     lappend project_name ${baseboard}
-    puts $project_name
   }
   set project_name [string map {" " "_"} "${project_name}"]
 }
