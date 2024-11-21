@@ -1,5 +1,5 @@
-# ----------------------------------------------------------------------------------
-# Copyright (c) 2022 by Enclustra GmbH, Switzerland.
+# ----------------------------------------------------------------------------------------------------
+# Copyright (c) 2024 by Enclustra GmbH, Switzerland.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of
 # this hardware, software, firmware, and associated documentation files (the
@@ -17,7 +17,7 @@
 # HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 # PRODUCT OR THE USE OR OTHER DEALINGS IN THE PRODUCT.
-# ----------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------
 
 # Project settings for Mercury ZX1 Reference Design
 # Valid module codes
@@ -25,15 +25,16 @@
 # ME-ZX1-30-2I-D10
 # ME-ZX1-35-1I-D10
 
-# ----------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------
 # Modify this variable to select your module
 if {![info exists module_name]} {set module_name ME-ZX1-45-2I-D10-P}
 if {![info exists baseboard]}   {set baseboard ST1}
-# ----------------------------------------------------------------------------------
+if {![info exists vivado_dir]}   {set vivado_dir [file join Vivado ${module_name}] }
+# ----------------------------------------------------------------------------------------------------
 
-# ----------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------
 # Don't modify anything beyond this line
-# ----------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------
 
 #if any file argument are present, use this value
 if {[lindex $argv 0] != ""} { set module_name [lindex $argv 0] }
@@ -52,7 +53,7 @@ switch $module_name {
     set part xc7z030fbg676-2 
     set CPU_FREQ 2I
     set PL_DDR 30-2I-D10
-    set MGT_routing IO
+    set MGT_routing No_MGT_routing
   }
   ME-ZX1-35-1I-D10 {
     set part xc7z035fbg676-1 

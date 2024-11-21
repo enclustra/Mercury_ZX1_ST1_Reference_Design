@@ -92,7 +92,7 @@
             <Pin VCCAUX_IO="" IOSTANDARD="DIFF_SSTL15_T_DCI" PADName="G10" SLEW="" name="ddr3_dqs_p[1]" IN_TERM="" />
             <Pin VCCAUX_IO="" IOSTANDARD="SSTL15" PADName="J13" SLEW="" name="ddr3_odt[0]" IN_TERM="" />
             <Pin VCCAUX_IO="" IOSTANDARD="SSTL15" PADName="H13" SLEW="" name="ddr3_ras_n" IN_TERM="" />
-            <Pin VCCAUX_IO="" IOSTANDARD="LVCMOS15" PADName="G9" SLEW="" name="ddr3_reset_n" IN_TERM="" />
+            <Pin VCCAUX_IO="" IOSTANDARD="LVCMOS18" PADName="G9" SLEW="" name="ddr3_reset_n" IN_TERM="" />
             <Pin VCCAUX_IO="" IOSTANDARD="SSTL15" PADName="K13" SLEW="" name="ddr3_we_n" IN_TERM="" />
         </PinSelection>
         <System_Clock>
