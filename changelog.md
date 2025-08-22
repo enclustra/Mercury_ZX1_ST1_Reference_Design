@@ -1,3 +1,7 @@
+## 2024.2_v1.2.3
+* Remove component declarations for components provided by the unisim library
+* Reduce SDIO controller frequency as a workaround for a known issue with Mercury ST1 R1
+
 ## 2024.1_v1.1.3
 * Add CLK_USR IOBUFDS instance to top level VHDL
 * Added CFGBVS voltage constraints
